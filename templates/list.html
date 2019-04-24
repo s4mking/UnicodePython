@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<table border='1'>
+<tr>
+    <th> Charact</th>
+    <th> Name</th>
+    <th>Number</th>
+    <th>Catégorie</th>
+</tr>
+    {% for i in range(0, len) %} 
+            <tr>
+               <td>{{tabs[i]['unicode']}}</td>
+               <td><a href="/unicode/{{tabs[i]['number']}}"> {{tabs[i]['name']}} </a></td>
+               <td> <a href="/unicode/{{tabs[i]['number']}}">{{tabs[i]['number']}} </a></td>
+               <td><a href="/unicode/{{tabs[i]['number']}}"> {{tabs[i]['cat']}}</a> </td>
+            </tr>
+   {% endfor %} 
+</table>
+{% endblock %}

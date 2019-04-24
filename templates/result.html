@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h3> Page d'affichage Unicode</h3>
+  <br>
+   <table border = 1>
+   {% for i in range(0, len) %} 
+            <tr>
+               <td colspan='2'>{{result_render[i]['unicode']}}</td>
+            </tr>
+            <tr>
+               <td> Nom </th>
+               <td><a href="/unicode/{{result_render[i]['number']}}"> {{result_render[i]['name']}} </a></td>
+            </tr>
+            <tr>
+               <td> Unicode Nombre </th>
+               <td> <a href="/unicode/{{result_render[i]['number']}}">{{result_render[i]['number']}} </a></td>
+            </tr>
+            <tr>
+               <td> Category </th>
+               <td><a href="/unicode/{{result_render[i]['number']}}"> {{result_render[i]['cat']}}</a> </td>
+            </tr>
+   {% endfor %} 
+      </table>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h3> Page d'affichage Unicode</h3>
+  <br>
+   <table border = 1>
+   <tr>
+               <td> Affichage </th>
+               <td> {{ unicode }}</td>
+            </tr>
+            <tr>
+               <td> Nom </th>
+               <td> {{ name }}</td>
+            </tr>
+            <tr>
+               <td> Unicode Nombre </th>
+               <td> {{ number }} </td>
+            </tr>
+            <tr>
+               <td> Category </th>
+               <td> {{ cat }} </td>
+            </tr>
+      </table>
+{% endblock %}
