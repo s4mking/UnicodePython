@@ -1,0 +1,7 @@
+table,
+table tr,
+table tr td,
+table tr th{
+    text-align: center;
+}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
