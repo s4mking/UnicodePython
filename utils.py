@@ -9,8 +9,11 @@ def findUnicode(unisearch):
         letter = chr(int(searchNumber))
         name_unicode = unicodedata.name(letter,' ')
         category = unicodedata.category(chr(int(searchNumber)))
+        hexauni = hex(ord(letter))
+        hexauni = hexauni.replace("0x", "U+")
         array_result[0] = {} 
         array_result[0]['unicode']=u""+letter+""
+        array_result[0]['hexa']=hexauni
         array_result[0]['name']=name_unicode
         array_result[0]['number']=int(searchNumber)
         array_result[0]['cat']=category
@@ -18,11 +21,14 @@ def findUnicode(unisearch):
     #test si chiffres
     elif(unisearch.isdigit()==True):
         letter = chr(int(unisearch))
+        hexauni = hex(ord(letter))
+        hexauni = hexauni.replace("0x", "U+")
         name_unicode = unicodedata.name(letter,' ')
         category = unicodedata.category(chr(int(unisearch)))
         array_result[0] = {} 
         array_result[0]['unicode']=u""+letter+""
         array_result[0]['name']=name_unicode
+        array_result[0]['hexa']=hexauni
         array_result[0]['number']=int(unisearch)
         array_result[0]['cat']=category
         return array_result
@@ -30,22 +36,30 @@ def findUnicode(unisearch):
     elif(a_bool==True):
         char = chr(int(unisearch[2:], 16))
         number = ord(char)
+        letter = chr(int(number))
+        hexauni = hex(ord(letter))
+        hexauni = hexauni.replace("0x", "U+")
         name_unicode = unicodedata.name(chr(number),' ')
         category = unicodedata.category(chr(number))
         array_result[0] = {} 
         array_result[0]['unicode']=u""+letter+""
         array_result[0]['name']=name_unicode
+        array_result[0]['hexa']=hexauni
         array_result[0]['number']=number
         array_result[0]['cat']=category
         return array_result
     #si un seul char
     elif(len(unisearch)==1):
         number = ord(unisearch)
+        letter = chr(int(number))
+        hexauni = hex(ord(letter))
+        hexauni = hexauni.replace("0x", "U+")
         name_unicode = unicodedata.name(chr(number),' ')
         category = unicodedata.category(chr(number))
         array_result[0] = {} 
         array_result[0]['unicode']=u""+letter+""
         array_result[0]['name']=name_unicode
+        array_result[0]['hexa']=hexauni
         array_result[0]['number']=number
         array_result[0]['cat']=category
         return array_result
@@ -84,10 +98,15 @@ def getAllInformations():
 def UniqueUni(codepoint):
     array_result=dict()
     letter = chr(int(codepoint))
-    print(letter)
+    print(str(chr(int(codepoint))))
+    lettertest = unicodedata.bidirectional(letter)
     name_unicode = unicodedata.name(letter,' ')
+    hexauni = hex(ord(letter))
+    hexauni = hexauni.replace("0x", "U+")
     category = unicodedata.category(chr(int(codepoint)))
     array_result['unicode']=u""+letter+""
+    array_result['bidir']=lettertest 
+    array_result['hexa']=hexauni 
     array_result['name']=name_unicode
     array_result['number']=int(codepoint)
     array_result['cat']=category

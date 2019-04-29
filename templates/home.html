@@ -1,21 +1,24 @@
 {% extends "layout.html" %}
 {% block content %}
-  <p class='h2'> Bienvenue sur my little tiny Unicode</p>
-  <blockquote class="blockquote text-center">
-  <p class="mb-0">Ce site a pour but de vous simplifier la vie.</p>
-  <footer class="blockquote-footer">Citation de  <cite title="Source Title">Samuel Simonney</cite></footer>
+    <p class='h2'> Bienvenue sur my little tiny Unicode</p>
+    <blockquote class="blockquote text-center">
+    <p class="mb-0">Ce site a pour but de vous simplifier la vie.</p>
+    <footer class="blockquote-footer">Citation de  <cite title="Source Title">Samuel Simonney</cite></footer>
+    <p>Unicode est un standard informatique qui permet des échanges de textes dans différentes langues, à un niveau mondial. Il est développé par le Consortium Unicode, qui vise au codage de texte écrit en donnant à tout caractère de n'importe quel système d'écriture un nom et un identifiant numérique, et ce de manière unifiée, quels que soient la plate-forme informatique ou le logiciel utilisés.</p>
 </blockquote>
+<p>Voici les différentes informations d'un caractère unicode : </p>
+<ul class="list-group">
+    <li class="list-group-item">Son caractère</li>
+    <li class="list-group-item">Son nom</li>
+    <li class="list-group-item">Son point de code en hexadécimal</li>
+    <li class="list-group-item">Son point de code en décimal</li>
+    <li class="list-group-item">Sa catégorie</li>
+</ul>
+
+<p> Voici quelques exemples de caractères unicodes : </p>
+<ul>
+  <li><a href="http://localhost:5000/search/?search=2">Le chiffre 2</a></li>
+  <li><a href="http://localhost:5000/search/?search=2">Tous les caractères avec un coeur dans leur nom</a></li>
+</ul>
+<p>Vous pouvez effectuer une recherche directement depuis la Navbar ou sur la page dédié <a href='http://localhost:5000/search/'>ici</a> ou dans le menu en hat à droite</p>
 {% endblock %}
-
-<!--
-[07:44] == samking [5d0490aa@gateway/web/freenode/ip.93.4.144.170] has joined #hackinscience
-[07:48] <samking> mdk: Bonjour,
-[07:49] <samking> c'est Samuel de Sup'internet j'aurai quelques questions sur le projet jes les ai envoyé en privé hier mais vu que j'ai pas d'historique je les repose ici.
-[07:50] <samking> j'ai avancé sur l'appli à faire, juste quelle est le comportement attendu quand l'utilisateur rentre un chiffre de 1 à 9 dans l'appli?
-[07:51] <samking> vu ce uqe j'ai vu sur d'autres sites d'unicode il faut que ça renvoie l'unicode de 1 à 9
-[07:51] <samking> comme ça grosso modo: https://github.com/s4mking/UnicodePython
-[07:52] <samking> ma 2e question c'est sur la page reesultat recherche est ce qu'on est obligé de faire passer les params par l'url ou en post ça va aussi
-[07:52] <samking> ?
-[07:52] <samking> Merci
-
--->

@@ -1,5 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
+<p>Afin de trouver les informations que vous désirez obtenir lancez une recherche à partir du formulaire ci-dessous.</p>
+<p>Vous pouvez effectuer une recherche sur : </p>
+<ul class="list-group">
+    <li class="list-group-item">Son caractère</li>
+    <li class="list-group-item">Son nom</li>
+    <li class="list-group-item">Son point de code en hexadécimal</li>
+    <li class="list-group-item">Son point de code en décimal</li>
+</ul>
+<p> Voici quelques exemples de caractères unicodes : </p>
+<ul>
+  <li><a href="http://localhost:5000/search/?search=2">Le chiffre 2</a></li>
+  <li><a href="http://localhost:5000/search/?search=2">Tous les caractères avec un coeur dans leur nom</a></li>
+</ul>
   <form class="navbar-form navbar-left" role="search" action="http://localhost:5000/search" method = "GET">
         <div class="form-group">
           <input type="text" name="search" class="form-control" placeholder="Search">

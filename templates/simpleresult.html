@@ -2,22 +2,30 @@
 {% block content %}
   <h3> Page d'affichage Unicode</h3>
   <br>
-   <table border = 1>
-   <tr>
-               <td> Affichage </th>
-               <td> {{ unicode }}</td>
-            </tr>
-            <tr>
-               <td> Nom </th>
-               <td> {{ name }}</td>
-            </tr>
-            <tr>
-               <td> Unicode Nombre </th>
-               <td> {{ number }} </td>
-            </tr>
-            <tr>
-               <td> Category </th>
-               <td> {{ cat }} </td>
-            </tr>
-      </table>
+   <table class="table table-sm table-light">
+      <tr class='table-primary'>
+         <td> Affichage </th>
+         <td> {{ unicode }}</td>
+      </tr>
+      <tr class="table-secondary">
+         <td> Nom </th>
+         <td> {{ name }}</td>
+      </tr>
+      <tr>
+         <td class="table-success"> Unicode Nombre </th>
+         <td> {{ number }} </td>
+      </tr>
+      <tr class="table-info">
+         <td> Hexa </th>
+         <td> {{ hexa }} </td>
+      </tr>
+      <tr class="table-info">
+         <td> Appartenance </th>
+         <td> {{ bidir }} </td>
+      </tr>
+      <tr class="table-info">
+         <td> Category </th>
+         <td> {{ cat }} </td>
+      </tr>
+   </table>
 {% endblock %}

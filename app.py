@@ -27,4 +27,4 @@ def list_all():
 def matchsasa_uni(codepoint):
     print(codepoint)
     resultUniqueUni = utils.UniqueUni(codepoint)
-    return render_template('simpleresult.html', name=resultUniqueUni['name'],number=resultUniqueUni['number'],cat=resultUniqueUni['cat'])
+    return render_template('simpleresult.html', unicode = resultUniqueUni['unicode'],hexa = resultUniqueUni['hexa'],bidir = resultUniqueUni['bidir'],name=resultUniqueUni['name'],number=resultUniqueUni['number'],cat=resultUniqueUni['cat'])

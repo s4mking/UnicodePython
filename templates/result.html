@@ -5,15 +5,20 @@
    <table class='table table-hover table-dark'>
    {% for i in range(0, len) %} 
             <tr>
-               <td colspan='2'>{{result_render[i]['unicode']}}</td>
+               <td colspan='2'><a href="/unicode/{{result_render[i]['number']}}">{{result_render[i]['unicode']}}</a></td>
             </tr>
             <tr>
                <td> Nom </th>
                <td><a href="/unicode/{{result_render[i]['number']}}"> {{result_render[i]['name']}} </a></td>
             </tr>
+            
             <tr>
                <td> Unicode Nombre </th>
                <td> <a href="/unicode/{{result_render[i]['number']}}">{{result_render[i]['number']}} </a></td>
+            </tr>
+            <tr>
+               <td> Hexa </th>
+               <td><a href="/unicode/{{result_render[i]['number']}}"> {{result_render[i]['hexa']}}</a> </td>
             </tr>
             <tr>
                <td> Category </th>
